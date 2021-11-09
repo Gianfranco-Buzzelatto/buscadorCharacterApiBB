@@ -1,0 +1,20 @@
+<form class="d-flex container mt-4 form" style="width:100%">
+    <input class="form-control me-2 " type="text" (input)='headlerInput($event)' placeholder="Busca un personaje">
+    <button class="btn btn-outline-primary" (click)="button()" type="button">Buscar</button>
+</form>
+<table class="table" *ngFor="let characters of filterCharacter">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Nombre</th>
+      <th scope="col">-</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">{{characters.char_id}}</th>
+      <td>{{characters.name}}</td>
+      <td><a class="btn btn-primary" routerLink="/characters/{{characters.char_id}}">Ver mas <i class="fas fa-info-circle"></i></a></td>
+    </tr>
+  </tbody>
+</table> 

@@ -1,0 +1,16 @@
+<div class="container">
+<div class="card mb-3 col mt-4" *ngFor="let character of character">
+    <div class="row g-0 mt-4" >
+      <div class="col-md-4">
+        <img src="{{character.img}}" class="img-fluid rounded-start" alt="...">
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">  
+          <h3 class="card-title d-flex justify-content-center">{{character.name}}</h3>
+          <p class="card-text">{{character.name}}, se dedica a {{character.occupation}}. Nacio el dia {{character.birthday}} y aparecio en la serie en las temporadas {{character.appearance}}. Su apodo es {{character.nickname}} y se encuentra {{character.status}}.</p>
+        </div>
+        <a  routerLink="/characters" type="button" class="btn btn-secondary">Volver <i class="fas fa-arrow-circle-left"></i> </a>
+      </div>
+    </div>
+  </div>
+</div>  
